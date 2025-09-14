@@ -42,9 +42,9 @@ alert_file.close()
 # New Alert Output if MISP Alert or Error calling the API
 alert_output = {}
 # MISP Server Base URL
-misp_base_url = "https://172.22.0.10/attributes/restSearch/"
+misp_base_url = "https://<misp container ip>/attributes/restSearch/"
 # MISP Server API AUTH KEY
-misp_api_auth_key = "uvkTZqCcJbNjZDyyCVPxuJtKSGlIVMvC4S7XTkZJ"
+misp_api_auth_key = "<Misp API Key>"
 # API - HTTP Headers
 misp_apicall_headers = {
     "Content-Type": "application/json",
@@ -250,4 +250,5 @@ elif event_source == "ossec" and event_type == "syscheck_entry_added":
             alert_output["misp"]["filepath"] = alert["syscheck"]["path"]
             send_event(alert_output, alert["agent"])
 else:
+
     sys.exit()
