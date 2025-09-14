@@ -1,0 +1,8 @@
+<decoder name="misp-json">
+  <prematch>^1:misp:</prematch>
+</decoder>
+
+<decoder name="misp-json-fields">
+  <parent>misp-json</parent>
+  <plugin_decoder>JSON_Decoder</plugin_decoder>
+</decoder>
